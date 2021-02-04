@@ -21,7 +21,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
-import Singleton from '../patterns/Singleton';
+import Singleton from '../patterns/Singleton/Singleton';
 
 const DRAWER_WIDTH = 240;
 
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Main: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
