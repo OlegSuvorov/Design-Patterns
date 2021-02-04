@@ -44,6 +44,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  indicator: {
+    backgroundColor: '#fff',
+  },
 }));
 
 const TabPanel = ({ children }: { children: React.ReactNode[]}) => {
@@ -57,7 +60,12 @@ const TabPanel = ({ children }: { children: React.ReactNode[]}) => {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+          classes={{ indicator: classes.indicator }}
+        >
           <Tab label="Code" {...allProps(0)} />
           <Tab label="Description" {...allProps(1)} />
         </Tabs>
