@@ -11,23 +11,26 @@ const useStyles = makeStyles({
   },
 });
 
-const Implementation = ({ children }: { children: React.ReactNode }) => {
+const Implementation =
+  ({
+     component: Component,
+  }: {
+  component: React.ReactNode;
+}) => {
   const [messages, setMessages] = useState(['']);
   const classes = useStyles();
 
   const addMessage = (message: string) => setMessages([...messages, message]);
-
-  const childrenWithProps = React.Children.map(children, (child: React.ReactNode) => {
-    if (child && React.isValidElement(child)) {
-      return React.cloneElement(child, { addMessage });
-    }
-    return child;
-  });
+  const clearAll = () => setMessages(['']);
+  const extraProps = { addMessage, clearAll };
 
   return (
     <div className={classes.root}>
       <Grid item xs={12} sm={12}>
-        {childrenWithProps}
+        {
+          // @ts-ignore
+          <Component { ...extraProps }/>
+        }
       </Grid>
       <Grid item xs={12} sm={12}>
         <Card variant="outlined">

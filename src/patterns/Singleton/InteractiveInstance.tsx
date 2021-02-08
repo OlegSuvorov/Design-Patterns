@@ -10,11 +10,20 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       marginBottom: theme.spacing(2),
     },
+    button: {
+      marginBottom: theme.spacing(2),
+    },
   }),
 );
 
-const InteractiveInstance = ({ addMessage }: { addMessage: Function }) => {
+const InteractiveInstance =
+  ({
+     addMessage,
+   }: {
+    addMessage: Function;
+  }) => {
   const classes = useStyles();
+
   const handleClick = () => {
     Singleton.getInstance(addMessage);
   };
@@ -23,7 +32,10 @@ const InteractiveInstance = ({ addMessage }: { addMessage: Function }) => {
     <div className={classes.root}>
       <Grid item xs={12} sm={12}>
         <Button
+          variant="contained"
           onClick={handleClick}
+          classes={{ root: classes.button }}
+          fullWidth
         >
           Create Singleton instance
         </Button>

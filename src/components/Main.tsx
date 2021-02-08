@@ -21,7 +21,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
-import Singleton from '../patterns/Singleton/Singleton';
+import Singleton from '../patterns/Singleton';
+import AbstractFactory from '../patterns/AbstractFactory';
 
 const DRAWER_WIDTH = 240;
 
@@ -139,6 +140,10 @@ const Main: React.FC = () => {
             <ListItemIcon><InboxIcon /></ListItemIcon>
             <Link color="inherit" component={NavLink} to="/singleton">Single</Link>
           </ListItem>
+          <ListItem button>
+            <ListItemIcon><InboxIcon /></ListItemIcon>
+            <Link color="inherit" component={NavLink} to="/abstract-factory">AbstractFactory</Link>
+          </ListItem>
         </List>
       </Drawer>
       <main
@@ -153,6 +158,9 @@ const Main: React.FC = () => {
           </Route>
           <Route path="/singleton">
             <Singleton />
+          </Route>
+          <Route path="/abstract-factory">
+            <AbstractFactory />
           </Route>
         </Switch>
       </main>

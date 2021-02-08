@@ -6,7 +6,7 @@ import { codeString, description } from './constants';
 import InteractiveInstance from './InteractiveInstance';
 import Implementation from '../../components/ImplementationWrapper';
 
-const Singleton: React.FC = () => (
+const AbstractFactory: React.FC = () => (
   <TabsPanel>
     <Code codeString={codeString} >
       <Implementation component={InteractiveInstance} />
@@ -15,4 +15,4 @@ const Singleton: React.FC = () => (
   </TabsPanel>
 );
 
-export default Singleton;
+export default AbstractFactory;
