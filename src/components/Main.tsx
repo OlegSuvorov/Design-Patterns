@@ -21,8 +21,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
-import Singleton from '../patterns/Singleton';
-import AbstractFactory from '../patterns/AbstractFactory';
+import { routes } from '../routes';
 
 const DRAWER_WIDTH = 240;
 
@@ -136,14 +135,13 @@ const Main: React.FC = () => {
         </div>
         <Divider />
         <List>
-          <ListItem button>
-            <ListItemIcon><InboxIcon /></ListItemIcon>
-            <Link color="inherit" component={NavLink} to="/singleton">Single</Link>
-          </ListItem>
-          <ListItem button>
-            <ListItemIcon><InboxIcon /></ListItemIcon>
-            <Link color="inherit" component={NavLink} to="/abstract-factory">AbstractFactory</Link>
-          </ListItem>
+          {routes && routes.length > 0 &&
+            routes.map(({ component, path, name }) => (
+              <ListItem key={name} button>
+                <ListItemIcon><InboxIcon /></ListItemIcon>
+                  <Link color="inherit" component={NavLink} to={path}>{name}</Link>
+              </ListItem>
+          ))}
         </List>
       </Drawer>
       <main
@@ -154,14 +152,14 @@ const Main: React.FC = () => {
         <div className={classes.drawerHeader} />
         <Switch>
           <Route exact path="/">
-            <Redirect to="/singleton" />
+            <Redirect to={(routes && routes.length > 0 && routes[0].path) || '/' } />
           </Route>
-          <Route path="/singleton">
-            <Singleton />
-          </Route>
-          <Route path="/abstract-factory">
-            <AbstractFactory />
-          </Route>
+          {routes && routes.length > 0 &&
+            routes.map(({ component: Component, path, name }) => (
+              <Route key={name} path={path}>
+                <Component />
+              </Route>
+          ))}
         </Switch>
       </main>
     </div>

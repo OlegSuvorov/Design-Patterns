@@ -111,7 +111,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Create ConcreteFactory 1
+          Create Concrete Factory 1
         </Button>
         {factory1 &&
         <Button
@@ -169,7 +169,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Create ConcreteFactory 2
+          Create Concrete Factory 2
         </Button>
         {factory2 &&
         <Button
