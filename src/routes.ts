@@ -2,6 +2,7 @@ import Singleton from './patterns/Singleton';
 import AbstractFactory from './patterns/AbstractFactory';
 import Adapter from './patterns/Adapter';
 import Builder from './patterns/Builder';
+import Bridge from './patterns/Bridge';
 
 export const routes = [
   {
@@ -23,5 +24,10 @@ export const routes = [
     name: 'Builder',
     path: '/builder',
     component: Builder,
+  },
+  {
+    name: 'Bridge',
+    path: '/bridge',
+    component: Bridge,
   }
 ];
