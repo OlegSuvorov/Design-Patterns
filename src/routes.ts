@@ -3,21 +3,12 @@ import AbstractFactory from './patterns/AbstractFactory';
 import Adapter from './patterns/Adapter';
 import Builder from './patterns/Builder';
 import Bridge from './patterns/Bridge';
+import ChainOfResponsibility from './patterns/ChainOfResponsibility';
 
-export const routes = [
-  {
-    name: 'Adapter',
-    path: '/adapter',
-    component: Adapter,
-  },
-  {
-    name: 'Singleton',
-    path: '/singleton',
-    component: Singleton
-  },
+export const creationalPatterns = [
   {
     name: 'Abstract Factory',
-    path: '/abstract-factory',
+    path: '/abstractFactory',
     component: AbstractFactory,
   },
   {
@@ -26,8 +17,29 @@ export const routes = [
     component: Builder,
   },
   {
+    name: 'Singleton',
+    path: '/singleton',
+    component: Singleton
+  },
+];
+
+export const structuralPatterns = [
+  {
+    name: 'Adapter',
+    path: '/adapter',
+    component: Adapter,
+  },
+  {
     name: 'Bridge',
     path: '/bridge',
     component: Bridge,
-  }
+  },
+];
+
+export const behavioralPatterns = [
+  {
+    name: 'ChainOfResponsibility',
+    path: '/chainOfResponsibility',
+    component: ChainOfResponsibility,
+  },
 ];

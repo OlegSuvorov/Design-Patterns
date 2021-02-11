@@ -21,7 +21,11 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import Toolbar from '@material-ui/core/Toolbar';
 import MenuIcon from '@material-ui/icons/Menu';
 import Typography from '@material-ui/core/Typography';
-import { routes } from '../routes';
+import {
+  creationalPatterns,
+  structuralPatterns,
+  behavioralPatterns,
+} from '../routes';
 
 const DRAWER_WIDTH = 240;
 
@@ -80,12 +84,25 @@ const useStyles = makeStyles((theme: Theme) => ({
     }),
     marginLeft: 0,
   },
+  typo: {
+    marginLeft: theme.spacing(2),
+  },
+  listItem: {
+    '& a': {
+      width: '100%',
+    }
+  }
 }));
 
 const Main: React.FC = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
+  const routes = [
+    ...structuralPatterns,
+    ...behavioralPatterns,
+    ...creationalPatterns,
+  ];
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -134,13 +151,64 @@ const Main: React.FC = () => {
           </IconButton>
         </div>
         <Divider />
+        <Typography
+          variant="h5"
+          noWrap
+          classes={{ root: classes.typo }}
+        >
+          Structural Patterns
+        </Typography>
+        <Divider />
         <List>
-          {routes && routes.length > 0 &&
-            routes.map(({ component, path, name }) => (
-              <ListItem key={name} button>
+          {structuralPatterns && structuralPatterns.length > 0 &&
+          structuralPatterns.map(({ component, path, name }) => (
+              <ListItem
+                classes={{ root: classes.listItem }}
+                key={name}
+                button>
                 <ListItemIcon><InboxIcon /></ListItemIcon>
                   <Link color="inherit" component={NavLink} to={path}>{name}</Link>
               </ListItem>
+          ))}
+        </List>
+        <Typography
+          variant="h5"
+          noWrap
+          classes={{ root: classes.typo }}
+        >
+          Creational Patterns
+        </Typography>
+        <Divider />
+        <List>
+          {creationalPatterns && creationalPatterns.length > 0 &&
+          creationalPatterns.map(({ component, path, name }) => (
+            <ListItem
+              classes={{ root: classes.listItem }}
+              key={name}
+              button>
+              <ListItemIcon><InboxIcon /></ListItemIcon>
+              <Link color="inherit" component={NavLink} to={path}>{name}</Link>
+            </ListItem>
+          ))}
+        </List>
+        <Typography
+          variant="h5"
+          noWrap
+          classes={{ root: classes.typo }}
+        >
+          Behavioral Patterns
+        </Typography>
+        <Divider />
+        <List>
+          {behavioralPatterns && behavioralPatterns.length > 0 &&
+          behavioralPatterns.map(({ component, path, name }) => (
+            <ListItem
+              classes={{ root: classes.listItem }}
+              key={name}
+              button>
+              <ListItemIcon><InboxIcon /></ListItemIcon>
+              <Link color="inherit" component={NavLink} to={path}>{name}</Link>
+            </ListItem>
           ))}
         </List>
       </Drawer>

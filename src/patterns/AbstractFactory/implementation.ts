@@ -64,4 +64,3 @@ export class ConcreteProductB2 implements AbstractProductB {
     return `The result of the B2 collaborating with the (${result})`;
   }
 }
-
