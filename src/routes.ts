@@ -4,6 +4,8 @@ import Adapter from './patterns/Adapter';
 import Builder from './patterns/Builder';
 import Bridge from './patterns/Bridge';
 import ChainOfResponsibility from './patterns/ChainOfResponsibility';
+import FactoryMethod from './patterns/FactoryMethod';
+import Prototype from './patterns/Prototype';
 
 export const creationalPatterns = [
   {
@@ -15,6 +17,16 @@ export const creationalPatterns = [
     name: 'Builder',
     path: '/builder',
     component: Builder,
+  },
+  {
+    name: 'Factory Method',
+    path: '/factoryMethod',
+    component: FactoryMethod,
+  },
+  {
+    name: 'Prototype',
+    path: '/prototype',
+    component: Prototype,
   },
   {
     name: 'Singleton',
@@ -38,7 +50,7 @@ export const structuralPatterns = [
 
 export const behavioralPatterns = [
   {
-    name: 'ChainOfResponsibility',
+    name: 'Chain Of Responsibility',
     path: '/chainOfResponsibility',
     component: ChainOfResponsibility,
   },

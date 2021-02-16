@@ -20,7 +20,12 @@ const Implementation =
   const [messages, setMessages] = useState(['']);
   const classes = useStyles();
 
-  const addMessage = (message: string) => setMessages([...messages, message]);
+  const addMessage = (message: string | string[]) => {
+    const newMessages = Array.isArray(message)
+      ? [...messages, ...message]
+      : [...messages, message];
+    setMessages(newMessages);
+  };
   const clearAll = () => setMessages(['']);
   const extraProps = { addMessage, clearAll };
 
