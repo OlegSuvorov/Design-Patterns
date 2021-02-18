@@ -73,7 +73,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Use Product created by Creator 1
+          Use Product created with Creator 1
         </Button>}
         <Button
           variant="contained"
@@ -91,7 +91,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Use Product created by Creator 2
+          Use Product created with Creator 2
         </Button>}
         <Button
           variant="contained"

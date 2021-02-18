@@ -80,7 +80,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Create Prototype 1 by new Prototype() constructor
+          Create Prototype 1 with new Prototype() constructor
         </Button>
         {prototype1 &&
         <Button
@@ -103,7 +103,7 @@ const InteractiveInstance =
           classes={{ root: classes.button }}
           fullWidth
         >
-          Create Prototype 2 by Prototype 1 clone() method
+          Create Prototype 2 with Prototype 1 clone() method
         </Button>}
         {prototype2 &&
         <Button

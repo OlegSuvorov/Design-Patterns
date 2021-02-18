@@ -6,6 +6,8 @@ import Bridge from './patterns/Bridge';
 import ChainOfResponsibility from './patterns/ChainOfResponsibility';
 import FactoryMethod from './patterns/FactoryMethod';
 import Prototype from './patterns/Prototype';
+import Composite from './patterns/Composite';
+import Decorator from './patterns/Decorator';
 
 export const creationalPatterns = [
   {
@@ -45,6 +47,16 @@ export const structuralPatterns = [
     name: 'Bridge',
     path: '/bridge',
     component: Bridge,
+  },
+  {
+    name: 'Composite',
+    path: '/composite',
+    component: Composite,
+  },
+  {
+    name: 'Decorator',
+    path: '/decorator',
+    component: Decorator,
   },
 ];
 
