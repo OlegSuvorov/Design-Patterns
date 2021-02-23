@@ -151,15 +151,15 @@ const Main: React.FC = () => {
           </IconButton>
         </div>
         <Divider />
-        <Typography
-          variant="h5"
-          noWrap
-          classes={{ root: classes.typo }}
-        >
-          Structural Patterns
-        </Typography>
-        <Divider />
         <List>
+          <Typography
+            variant="h6"
+            noWrap
+            classes={{ root: classes.typo }}
+          >
+            Structural Patterns
+          </Typography>
+          <Divider />
           {structuralPatterns && structuralPatterns.length > 0 &&
           structuralPatterns.map(({ component, path, name }) => (
               <ListItem
@@ -171,15 +171,16 @@ const Main: React.FC = () => {
               </ListItem>
           ))}
         </List>
-        <Typography
-          variant="h5"
-          noWrap
-          classes={{ root: classes.typo }}
-        >
-          Creational Patterns
-        </Typography>
         <Divider />
         <List>
+          <Typography
+            variant="h6"
+            noWrap
+            classes={{ root: classes.typo }}
+          >
+            Creational Patterns
+          </Typography>
+          <Divider />
           {creationalPatterns && creationalPatterns.length > 0 &&
           creationalPatterns.map(({ component, path, name }) => (
             <ListItem
@@ -191,15 +192,16 @@ const Main: React.FC = () => {
             </ListItem>
           ))}
         </List>
-        <Typography
-          variant="h5"
-          noWrap
-          classes={{ root: classes.typo }}
-        >
-          Behavioral Patterns
-        </Typography>
         <Divider />
         <List>
+          <Typography
+            variant="h6"
+            noWrap
+            classes={{ root: classes.typo }}
+          >
+            Behavioral Patterns
+          </Typography>
+          <Divider />
           {behavioralPatterns && behavioralPatterns.length > 0 &&
           behavioralPatterns.map(({ component, path, name }) => (
             <ListItem

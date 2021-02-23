@@ -8,6 +8,8 @@ import FactoryMethod from './patterns/FactoryMethod';
 import Prototype from './patterns/Prototype';
 import Composite from './patterns/Composite';
 import Decorator from './patterns/Decorator';
+import Facade from './patterns/Facade';
+import Flyweight from './patterns/Flyweight';
 
 export const creationalPatterns = [
   {
@@ -57,6 +59,16 @@ export const structuralPatterns = [
     name: 'Decorator',
     path: '/decorator',
     component: Decorator,
+  },
+  {
+    name: 'Facade',
+    path: '/facade',
+    component: Facade,
+  },
+  {
+    name: 'Flyweight',
+    path: '/flyweight',
+    component: Flyweight,
   },
 ];
 
