@@ -10,6 +10,8 @@ import Composite from './patterns/Composite';
 import Decorator from './patterns/Decorator';
 import Facade from './patterns/Facade';
 import Flyweight from './patterns/Flyweight';
+import Proxy from './patterns/Proxy';
+import Command from './patterns/Command';
 
 export const creationalPatterns = [
   {
@@ -70,6 +72,11 @@ export const structuralPatterns = [
     path: '/flyweight',
     component: Flyweight,
   },
+  {
+    name: 'Proxy',
+    path: '/proxy',
+    component: Proxy,
+  },
 ];
 
 export const behavioralPatterns = [
@@ -77,5 +84,10 @@ export const behavioralPatterns = [
     name: 'Chain Of Responsibility',
     path: '/chainOfResponsibility',
     component: ChainOfResponsibility,
+  },
+  {
+    name: 'Command',
+    path: '/command',
+    component: Command,
   },
 ];
