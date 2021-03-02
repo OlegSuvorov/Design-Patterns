@@ -12,6 +12,8 @@ import Facade from './patterns/Facade';
 import Flyweight from './patterns/Flyweight';
 import Proxy from './patterns/Proxy';
 import Command from './patterns/Command';
+import Iterator from './patterns/Iterator';
+import Mediator from './patterns/Mediator';
 
 export const creationalPatterns = [
   {
@@ -89,5 +91,15 @@ export const behavioralPatterns = [
     name: 'Command',
     path: '/command',
     component: Command,
+  },
+  {
+    name: 'Iterator',
+    path: '/iterator',
+    component: Iterator,
+  },
+  {
+    name: 'Mediator',
+    path: '/mediator',
+    component: Mediator,
   },
 ];
