@@ -14,6 +14,10 @@ import Proxy from './patterns/Proxy';
 import Command from './patterns/Command';
 import Iterator from './patterns/Iterator';
 import Mediator from './patterns/Mediator';
+import Memento from './patterns/Memento';
+import Observer from './patterns/Observer';
+import State from './patterns/State';
+import Strategy from './patterns/Strategy';
 
 export const creationalPatterns = [
   {
@@ -101,5 +105,25 @@ export const behavioralPatterns = [
     name: 'Mediator',
     path: '/mediator',
     component: Mediator,
+  },
+  {
+    name: 'Memento',
+    path: '/memento',
+    component: Memento,
+  },
+  {
+    name: 'Observer',
+    path: '/observer',
+    component: Observer,
+  },
+  {
+    name: 'State',
+    path: '/state',
+    component: State,
+  },
+  {
+    name: 'Strategy',
+    path: '/strategy',
+    component: Strategy,
   },
 ];
