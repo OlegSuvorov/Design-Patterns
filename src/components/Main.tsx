@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Switch,
   Route,
-  Redirect
+  Redirect,
+  useLocation,
 } from "react-router-dom";
 import clsx from 'clsx';
 import { NavLink } from "react-router-dom";
@@ -103,7 +104,8 @@ const Main: React.FC = () => {
     ...behavioralPatterns,
     ...creationalPatterns,
   ];
-
+  const location = useLocation();
+  const currentRoute = routes.find(route => route.path === location.pathname) || { name: ''};
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -132,7 +134,7 @@ const Main: React.FC = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Design Patterns
+            Design Patterns: &nbsp;{currentRoute.name}
           </Typography>
         </Toolbar>
       </AppBar>

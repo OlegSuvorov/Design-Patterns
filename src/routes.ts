@@ -18,6 +18,8 @@ import Memento from './patterns/Memento';
 import Observer from './patterns/Observer';
 import State from './patterns/State';
 import Strategy from './patterns/Strategy';
+import TemplateMethod from './patterns/TemplateMethod';
+import Visitor from './patterns/Visitor';
 
 export const creationalPatterns = [
   {
@@ -125,5 +127,15 @@ export const behavioralPatterns = [
     name: 'Strategy',
     path: '/strategy',
     component: Strategy,
+  },
+  {
+    name: 'Template Method',
+    path: '/templateMethod',
+    component: TemplateMethod,
+  },
+  {
+    name: 'Visitor',
+    path: '/visitor',
+    component: Visitor,
   },
 ];
